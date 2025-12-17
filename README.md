@@ -1,117 +1,71 @@
-# AshaAI Chatbot 🤖✨
+## Asha AI Chatbot
+Asha AI Chatbot is an AI-powered career assistant designed to support users in their professional journey by providing job opportunities, career-related events, mentorship guidance, and intelligent career advice through natural language conversations.
+The system combines a FastAPI-based backend with a lightweight web frontend and integrates Large Language Models along with real-world APIs to deliver reliable, context-aware, and user-friendly interactions.
+_______________________________________
 
-Your personal career companion for job listings, events, mentorship, and career advice!
+## Project Structure Overview
 
----
+AshaAiChatbot
+│
+├── backend
+│   │
+│   ├── main.py               (FastAPI application entry point)
+│   ├── chat_memory.py        (Multi-turn conversation memory handling)
+│   ├── database.py           (Database connection and ORM logic)
+│   ├── crypto_utils.py       (Encryption and security utilities)
+│   ├── events.py             (Career events integration – Eventbrite)
+│   ├── intent_classifier.py  (User intent detection and routing)
+│   ├── job_listings.py       (Job search services – Jooble & Remotive)
+│   ├── location.py           (User location detection utilities)
+│   ├── mistral_client.py     (LLM integration via OpenRouter)
+│   ├── chatbot.db            (SQLite database)
+│   └── .env.template         (Environment variable template)
+│
+├── frontend
+│   │
+│   ├── index.html            (User interface)
+│   ├── style.css             (Styling and layout)
+│   ├── script.js             (Client-side logic and API calls)
+│   └── logo.png              (Application branding)
+│
+└── README.md                 (Project documentation)
 
-## 📦 Project Structure
+────────────────────────────────────
 
-AshaAI_Chatbot/ 
-├── backend/ │
- ├── main.py │ 
- ├── chat_memory.py │
- ├── database.py │ 
- ├── crypto_utils.py │ 
- ├── events.py │ 
- ├── intent_classifier.py │ 
- ├── job_listings.py │ 
- ├── location.py │ 
- ├── mistral_client.py │ 
- ├── chatbot.db 
- │ └── .env.template
-├── frontend/ │
- ├── index.html │ 
- ├── style.css │ 
- ├── script.js │ 
- ├── logo.png 
-└── README.md
+## Backend Setup Instructions
 
+Navigate to the backend directory using a terminal. Create a virtual environment and activate it according to your operating system. Install the required dependencies including FastAPI, Uvicorn, python-dotenv, SQLAlchemy, cryptography, and requests.
 
----
-
-## ⚙️ Setup Backend (FastAPI)
-
-1. Open terminal inside `/backend/`
-
-
-2. Create and activate virtual environment:
-
-   python -m venv venv
-   source venv/bin/activate  # (Mac/Linux)
-   .\venv\Scripts\activate    # (Windows)
-
-
-3.Install dependencies:
-
-pip install fastapi uvicorn python-dotenv sqlalchemy cryptography requests
-
-
-4.Create .env file:
-
-Copy .env.template to .env:
-cp .env.template
- .env
-
-
-5.Fill your API keys inside .env:
-
-env
-API_KEY="your OpenRouter API key"
-API_URL="https://openrouter.ai/api/v1/chat/completions"
-DATABASE_URL="sqlite:///chatbot.db"
-MODEL_NAME="mistralai/mistral-7b-instruct"
-JOOBLE_API_KEY="your Jooble API key"
-EVENTBRITE_API_TOKEN="your Eventbrite API token"
-IPINFO_TOKEN="your IPInfo API token"
-
-
-6.Run the FastAPI server:
-
-uvicorn main:app --reload
-
-
-7.Backend server will run at:
+Create a `.env` file by copying the provided `.env.template` and configure the necessary API keys such as OpenRouter, Jooble, Eventbrite, and IPInfo. Once configured, start the FastAPI server using Uvicorn. The backend service will be available at:
 
 http://127.0.0.1:8000
 
+────────────────────────────────────
 
+## Frontend Setup Instructions
 
-## 🌐 Setup Frontend
+Navigate to the frontend directory and open `index.html` directly in a web browser. Ensure that the backend server is running before interacting with the chatbot to enable proper communication between the frontend and backend.
 
-Open /frontend/ folder.
-Open index.html directly in your browser.
-Make sure backend server is running first.
+────────────────────────────────────
 
-## 💬 Chatbot Features
+## Chatbot Capabilities
 
-🧠 Multi-turn conversation memory
-🛡️ Offensive/Bias message detection
-💼 Job listings from Jooble and Remotive
-🎟️ Events from Eventbrite
-🤖 Fallback AI chat using Mistral (OpenRouter)
-💬 Load previous chat history on page refresh
-🧹 Clear chat history with a button
-🍪 Session management via cookies
+The chatbot supports multi-turn conversation memory, detects offensive or biased inputs, provides job listings from Jooble and Remotive, fetches career events using Eventbrite, and offers AI-driven fallback responses using the Mistral model via OpenRouter. Chat history is preserved across page refreshes, sessions are managed using cookies, and users can clear conversation history when required.
 
+────────────────────────────────────
 
-## 🧠 Important Notes
+## Important Notes
 
-If chatbot says "⚠️ Failed to connect", check if backend is running.
+If the chatbot displays a connection error, verify that the backend server is active and running. Environment variables and API keys must remain confidential and should never be committed to version control. External APIs may occasionally be rate-limited, and the chatbot is designed to handle such situations gracefully.
 
-Keep your .env secret — never upload real keys publicly!
+────────────────────────────────────
 
-Jooble or Eventbrite APIs may sometimes be rate limited — bot will handle it gracefully.
+## Future Enhancements
 
-🚀 Future Upgrades (Optional)
-Add user authentication (login/signup)
+Planned improvements include user authentication (login and signup), voice-to-text interaction, deployment to cloud platforms such as Render or Railway, enhanced database design for long-term career tracking, and further user interface refinements.
 
-Add voice-to-text functionality
+────────────────────────────────────
 
-Deploy backend to free hosting (Render.com / Railway.app)
-
-Improve database for tracking user's career journey
-
-## 🎉 Congratulations!
-You now have a full production-ready AI-powered career chatbot! 🚀
-with ❤️ Akshaya N E + Mirunalini ❤️ 
-
+## Contributors
+Akshaya N E  
+Mirunalini A  
