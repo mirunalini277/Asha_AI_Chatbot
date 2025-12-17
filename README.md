@@ -5,29 +5,31 @@ _______________________________________
 
 ## Project Structure Overview
 
-AshaAiChatbot/
-├── backend/
-│   ├── main.py              # FastAPI application entry point
-│   ├── chat_memory.py       # Multi-turn conversation memory handling
-│   ├── database.py          # Database connection and ORM logic
-│   ├── crypto_utils.py      # Encryption and security utilities
-│   ├── events.py            # Career events integration (Eventbrite)
-│   ├── intent_classifier.py # User intent detection and routing
-│   ├── job_listings.py      # Job search services (Jooble & Remotive)
-│   ├── location.py          # User location detection utilities
-│   ├── mistral_client.py    # LLM integration via OpenRouter
-│   ├── chatbot.db           # SQLite database
-│   └── .env.template        # Environment variable template
-│
-├── frontend/
-│   ├── index.html           # User interface
-│   ├── style.css            # Styling and layout
-│   ├── script.js            # Client-side logic and API calls
-│   └── logo.png             # Application branding
-│
-└── README.md
+Project Structure Overview
 
+AshaAIChatbot consists of two main components: backend and frontend.
 
+Backend
+- main.py — FastAPI application entry point
+- chat_memory.py — Multi-turn conversation memory handling
+- database.py — Database connection and ORM logic
+- crypto_utils.py — Encryption and security utilities
+- events.py — Career events integration using Eventbrite
+- intent_classifier.py — User intent detection and routing
+- job_listings.py — Job search services using Jooble and Remotive
+- location.py — User location detection utilities
+- mistral_client.py — LLM integration via OpenRouter
+- chatbot.db — SQLite database
+- .env.template — Environment variable template
+
+Frontend
+- index.html — User interface
+- style.css — Styling and layout
+- script.js — Client-side logic and API calls
+- logo.png — Application branding
+
+Documentation
+- README.md — Project documentation
 ────────────────────────────────────
 
 ## Backend Setup Instructions
