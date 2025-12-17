@@ -30,6 +30,7 @@ Frontend
 
 Documentation
 - README.md — Project documentation
+  
 ────────────────────────────────────
 
 ## Backend Setup Instructions
