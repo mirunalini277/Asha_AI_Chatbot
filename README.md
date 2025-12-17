@@ -5,54 +5,30 @@ _______________________________________
 
 ## Project Structure Overview
 
-AshaAiChatbot
-│
-├── backend
-│   │
-│   ├── main.py               (FastAPI application entry point)
-│   ├── chat_memory.py        (Multi-turn conversation memory handling)
-│   ├── database.py           (Database connection and ORM logic)
-│   ├── crypto_utils.py       (Encryption and security utilities)
-│   ├── events.py             (Career events integration – Eventbrite)
-│   ├── intent_classifier.py  (User intent detection and routing)
-│   ├── job_listings.py       (Job search services – Jooble & Remotive)
-│   ├── location.py           (User location detection utilities)
-│   ├── mistral_client.py     (LLM integration via OpenRouter)
-│   ├── chatbot.db            (SQLite database)
-│   └── .env.template         (Environment variable template)
-│
-├── frontend
-│   │
-│   ├── index.html            (User interface)
-│   ├── style.css             (Styling and layout)
-│   ├── script.js             (Client-side logic and API calls)
-│   └── logo.png              (Application branding)
-│
-└── README.md                 (Project documentation)
-
-────────────────────────────────────
-
-AshaAI_Chatbot/
+AshaAiChatbot/
 ├── backend/
-│ ├── main.py
-│ ├── chat_memory.py
-│ ├── database.py
-│ ├── crypto_utils.py
-│ ├── events.py
-│ ├── intent_classifier.py
-│ ├── job_listings.py
-│ ├── location.py
-│ ├── mistral_client.py
-│ ├── chatbot.db
-│ └── .env.template
+│   ├── main.py              # FastAPI application entry point
+│   ├── chat_memory.py       # Multi-turn conversation memory handling
+│   ├── database.py          # Database connection and ORM logic
+│   ├── crypto_utils.py      # Encryption and security utilities
+│   ├── events.py            # Career events integration (Eventbrite)
+│   ├── intent_classifier.py # User intent detection and routing
+│   ├── job_listings.py      # Job search services (Jooble & Remotive)
+│   ├── location.py          # User location detection utilities
+│   ├── mistral_client.py    # LLM integration via OpenRouter
+│   ├── chatbot.db           # SQLite database
+│   └── .env.template        # Environment variable template
 │
 ├── frontend/
-│ ├── index.html
-│ ├── style.css
-│ ├── script.js
-│ └── logo.png
+│   ├── index.html           # User interface
+│   ├── style.css            # Styling and layout
+│   ├── script.js            # Client-side logic and API calls
+│   └── logo.png             # Application branding
 │
 └── README.md
+
+
+────────────────────────────────────
 
 ## Backend Setup Instructions
 
