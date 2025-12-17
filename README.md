@@ -35,9 +35,15 @@ Documentation
 
 ## Backend Setup Instructions
 
-Navigate to the backend directory using a terminal. Create a virtual environment and activate it according to your operating system. Install the required dependencies including FastAPI, Uvicorn, python-dotenv, SQLAlchemy, cryptography, and requests.
+Navigate to the backend directory using a terminal. 
 
-Create a `.env` file by copying the provided `.env.template` and configure the necessary API keys such as OpenRouter, Jooble, Eventbrite, and IPInfo. Once configured, start the FastAPI server using Uvicorn. The backend service will be available at:
+Create a virtual environment and activate it according to your operating system. 
+
+Install the required dependencies including FastAPI, Uvicorn, python-dotenv, SQLAlchemy, cryptography, and requests.
+
+Create a `.env` file by copying the provided `.env.template` and configure the necessary API keys such as OpenRouter, Jooble, Eventbrite, and IPInfo. Once configured, start the FastAPI server using Uvicorn. 
+
+The backend service will be available at:
 
 http://127.0.0.1:8000
 
@@ -45,13 +51,21 @@ http://127.0.0.1:8000
 
 ## Frontend Setup Instructions
 
-Navigate to the frontend directory and open `index.html` directly in a web browser. Ensure that the backend server is running before interacting with the chatbot to enable proper communication between the frontend and backend.
+Navigate to the frontend directory and open `index.html` directly in a web browser.
+
+Ensure that the backend server is running before interacting with the chatbot to enable proper communication between the frontend and backend.
 
 ────────────────────────────────────
 
 ## Chatbot Capabilities
 
-The chatbot supports multi-turn conversation memory, detects offensive or biased inputs, provides job listings from Jooble and Remotive, fetches career events using Eventbrite, and offers AI-driven fallback responses using the Mistral model via OpenRouter. Chat history is preserved across page refreshes, sessions are managed using cookies, and users can clear conversation history when required.
+- AI-powered conversational career guidance
+- Multi-turn chat memory with session persistence
+- Job listings from Jooble & Remotive
+- Career events powered by Eventbrite
+- Bias and offensive message detection
+- Lightweight frontend with real-time responses
+- Secure environment-based configuration
 
 ────────────────────────────────────
 
@@ -63,10 +77,11 @@ If the chatbot displays a connection error, verify that the backend server is ac
 
 ## Future Enhancements
 
-Planned improvements include user authentication (login and signup), voice-to-text interaction, deployment to cloud platforms such as Render or Railway, enhanced database design for long-term career tracking, and further user interface refinements.
+Planned improvements include user authentication (login and signup), voice-to-text interaction.
 
 ────────────────────────────────────
 
 ## Contributors
 Akshaya N E  
 Mirunalini A  
+Executable Chatbot Application Hosted URL: https://ashaaichatbot-uo44.onrender.com/
