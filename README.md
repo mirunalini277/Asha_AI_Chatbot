@@ -32,6 +32,28 @@ AshaAiChatbot
 
 ────────────────────────────────────
 
+AshaAI_Chatbot/
+├── backend/
+│ ├── main.py
+│ ├── chat_memory.py
+│ ├── database.py
+│ ├── crypto_utils.py
+│ ├── events.py
+│ ├── intent_classifier.py
+│ ├── job_listings.py
+│ ├── location.py
+│ ├── mistral_client.py
+│ ├── chatbot.db
+│ └── .env.template
+│
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ ├── script.js
+│ └── logo.png
+│
+└── README.md
+
 ## Backend Setup Instructions
 
 Navigate to the backend directory using a terminal. Create a virtual environment and activate it according to your operating system. Install the required dependencies including FastAPI, Uvicorn, python-dotenv, SQLAlchemy, cryptography, and requests.
